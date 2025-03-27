@@ -6,7 +6,7 @@
 
 body {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -15,17 +15,19 @@ body {
 }
 
 .header {
+  color: #fff;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .emoji-container {
-  min-width: 150px;
+  min-width: 200px;
   min-height: 150px;
-  border: solid 1px;
+  border: none;
   border-radius: 5px;
   position: relative;
-  background-color: antiquewhite;
+  background-color: rgba(255, 255, 255, 0.61)
   
 }
 
@@ -34,11 +36,17 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 32px;
+  font-size: 5rem;
   outline: none;
   border: none;
   background: transparent;
+  filter: grayscale();
+  transition: filter .2s ease-in-out;
   cursor: pointer;
+}
+
+.emoji-container .btn:hover {
+  filter: grayscale(0);
 }
 
 .emoji-name {
