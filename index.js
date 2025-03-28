@@ -8,18 +8,13 @@ const emoji = [];
 
 async function getEmoji(){
   let response = await fetch(baseURL);
-
   let data = await response.json();
-
-  console.log(data);
-
   for (let i=0; i<data.length; i++) {
     emoji.push({
       emoji: data[i].character,
       emojiName: data[i].unicodeName
     })
   }
-
   // console.log(emoji)
 }
 
