@@ -20,7 +20,6 @@ async function getEmoji(){
 
 getEmoji();
 
-
 btnEl.addEventListener('click', ()=>{
   if (emoji.length === 0) {
     // console.log("Emoji array is empty! Wait for data to load.");
